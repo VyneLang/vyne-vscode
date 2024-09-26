@@ -1,0 +1,27 @@
+{
+  "name": "vyne-support",
+  "displayName": "Vyne Support",
+  "description": "The official VyneLang extencion for Visual Studio Code",
+  "author": "Miguel V.",
+  "publisher": "MiguelV",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "vyne",
+      "aliases": ["vynelang", "vyne"],
+      "extensions": [".vy",".vyne"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "vyne",
+      "scopeName": "source.vyne",
+      "path": "./syntaxes/vyne.tmLanguage.json"
+    }]
+  }
+}

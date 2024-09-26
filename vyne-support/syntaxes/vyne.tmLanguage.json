@@ -1,0 +1,62 @@
+{
+	"scopeName": "source.vyne",
+	"patterns": [
+	  {
+		"name": "comment.block.vyne",
+		"begin": "/\\*",
+		"end": "\\*/",
+		"patterns": [
+		  {
+			"name": "comment.block.documentation.vyne",
+			"begin": "\\/\\*\\*",
+			"end": "\\*\\/",
+			"patterns": [
+			  {
+				"include": "#documentation"
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"name": "comment.line.double-slash.vyne",
+		"match": "//.*$"
+	  },
+	  {
+		"name": "keyword.control.vyne",
+		"match": "\\b(if|else|for|while|return|break|continue|switch|case|default)\\b"
+	  },
+	  {
+		"name": "variable.language.vyne",
+		"match": "\\b(let|const|var)\\b"
+	  },
+	  {
+		"name": "string.quoted.double.vyne",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.vyne",
+			"match": "\\\\."
+		  }
+		]
+	  }
+	],
+	"repository": {
+	  "documentation": {
+		"patterns": [
+		  {
+			"name": "markup.documentation",
+			"begin": "\\*",
+			"end": "\\*",
+			"patterns": [
+			  {
+				"include": "#markup"
+			  }
+			]
+		  }
+		]
+	  }
+	}
+  }
+  

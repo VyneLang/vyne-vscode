@@ -1,0 +1,19 @@
+{
+    "Print Statement": {
+      "prefix": "print",
+      "body": [
+        "console.log($1);"
+      ],
+      "description": "Print to console"
+    },
+    "Function Declaration": {
+      "prefix": "func",
+      "body": [
+        "function ${1:name}(${2:args}) {",
+        "\t$0",
+        "}"
+      ],
+      "description": "Function declaration"
+    }
+  }
+  
